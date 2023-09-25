@@ -1,1 +1,1 @@
-# todo_list, Node.JS, Express.JS, & EJS
+# todo_list, Node.JS, Express.JS, EJS & CSS.
