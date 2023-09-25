@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/" class="switch">Today list</a>
+
+    <div class="title">    
+        <h1>Work List</h1>
+    </div>
+
+    <div class="form">
+    <form action="/work/submit" method="POST">
+        <input type="text" name="new-task" placeholder="Insert your new task" class="field">
+        <input type="submit" value="+" class="plus">
+    </form>
+
+        <% if (locals.list) { %>
+            <div class="list">
+            <ul>
+                <% list.forEach((task) => { %>
+                    <li>
+                      <%=task%> <input type="checkbox" name="tick">
+                    </li>    
+                    <%}) %>
+            </ul>
+            </div>
+        <% } else { %>
+            <h1 class="no-item">Let's add a new task!</h1>
+        <% } %>
+    </div>
+</body>
+</html>
